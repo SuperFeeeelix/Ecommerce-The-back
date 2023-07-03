@@ -28,7 +28,7 @@ CREATE TABLE tag (
     PRIMARY KEY (id)
 );
 
-CREATE TABLE productTag (
+CREATE TABLE ProductTag (
     id INT NOT NULL AUTO_INCREMENT,
     product_id INT,
     tag_id INT,
