@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
   // find all tags
   try{
     const tagData = await Tag.findAll({
-      include: [{ model: Product }]
+      include: [{ model: Product, through: ProductTag }]
     });
     res.status(200).json(tagData);
   } catch (err) {
@@ -47,7 +47,7 @@ router.put('/:id', async (req, res) => {
   // update a tag's name by its `id` value
   try{
     const { id } = req.params;
-    const { name } = req.body;
+    const { tag_name } = req.body;
 
     const tagData = await Tag.update(
       { tag_name },

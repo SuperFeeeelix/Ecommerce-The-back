@@ -6,10 +6,10 @@ const { Category, Product } = require('../../models');
 router.get('/', async (req, res) => {
   // find all categories
   try{
-    const categoriesData = await Category.findAll({
+    const categoryData = await Category.findAll({
       include:[{ model: Product }],
     });
-    res.status(200).json(categoriesData); 
+    res.status(200).json(categoryData); 
   } catch (err) {
     res.status(500).json(err);
   }
@@ -18,16 +18,16 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   // find one category by its `id` value
   try{
-    const categoriesData = await categoriesData.findByPk(req.params.id, {
+    const categoryData = await categoryData.findByPk(req.params.id, {
       include: [{ model: Product }],
     });
 
-    if (!categoriesData) {
+    if (!categoryData) {
       res.status(404).json({ message: 'No category product found with that id!' });
       return;
     }
 
-    res.status(200).json(categoriesData);
+    res.status(200).json(categoryData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -51,18 +51,18 @@ router.put('/:id', async (req, res) => {
     const { id } = req.params;
     const { category_name } = req.body;
 
-    const categoriesData = await Category.update(
+    const categoryData = await Category.update(
       { category_name },
       {
         where: { id }
       }
     );
-    if (categoriesData[0] === 0) {
+    if (categoryData[0] === 0) {
       res.status(404).json({ message: 'No category was found with that id!' });
       return;
     }
 
-    res.status(200).json(categoriesData);
+    res.status(200).json(categoryData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -71,18 +71,18 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   // delete a category by its `id` value
 try{ 
-  const categoriesData = await Category.destroy({
+  const categoryData = await Category.destroy({
     where: {
       id: req.params.id,
     },
   });
 
-  if (!categoriesData) {
+  if (!categoryData) {
     res.status(404).json({ message: 'No data found with that id!' });
     return;
   }
 
-  res.status(200).json(categoriesData);
+  res.status(200).json(categoryData);
 } catch (err) {
   res.status(500).json(err);
 }
