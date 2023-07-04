@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Category, Product } = require('../../db/models/Category');
+const { Category, Product } = require('../../db/models');
 
 // The `/api/categories` endpoint
 
