@@ -6,6 +6,7 @@
   * [Dependencies](#dependencies)
   * [Features](#features)
   * [API-Endpoints](#api-endpoints)
+  * [Video](#video)
   * [Usage](#usage)
   * [Contact-Me](#contact-me)
   * [License](#license)
@@ -25,6 +26,8 @@
   Products: `/api/products`
   Categories: `/api/categories`
   Tags: `/api/tags`
+  ## Video
+  
   ## Usage
   Node.js, Express.js, and Sequelize as the ORM for interacting with the MySql database
   1. Install the necessary dependencies by running `npm install`
