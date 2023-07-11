@@ -5,10 +5,11 @@
   * [Description](#description)
   * [Dependencies](#dependencies)
   * [Features](#features)
-  * [API-Endpoints](#API-Endpoints)
-  * [Licenses](#licenses)
+  * [API-Endpoints](#api-endpoints)
   * [Usage](#usage)
   * [Contact-Me](#contact-me)
+  * [License](#license)
+
   https://opensource.org/licenses/MIT
   ## Description
   This is the backend applications for an Ecommerce project. It provides a RESTful API for managing products, categories, and tags.
