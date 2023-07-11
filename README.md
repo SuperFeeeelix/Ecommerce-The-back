@@ -27,6 +27,8 @@
   Categories: `/api/categories`
   Tags: `/api/tags`
   ## Video
+  [Untitled_ Jul 10, 2023 5_35 PM.webm](https://github.com/SuperFeeeelix/Ecommerce-The-back/assets/127154412/a346988a-413f-402f-9fe6-2ccaa5c5021b)
+
   
   ## Usage
   Node.js, Express.js, and Sequelize as the ORM for interacting with the MySql database
